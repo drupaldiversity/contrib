@@ -17,11 +17,36 @@ try [Option A: drupal-composer/drupal-project](https://github.com/drupal-compose
 
 ### Update Drupal core
 
+At the time of writing this Drupal 8.4 has just been released. You may need to
+edit your composer.json file to get this version and to avoid conflicts. Also
+remove/rename your vendor and json.lock files prior to updating. The following
+settings work for 8.4.
+
 ```
+    "require": {
+        ...
+        "drupal/console": "^1.0.1",
+        "drupal/core": "^8.4",
+        "drush/drush": "~9.0",
+        ...
+    },
+    ...
+    "config": {
+        "sort-packages": true,
+        "platform": {"php": "5.6"}
+    },
+```
+
+```
+/var/www/html/drupal8.dev $ mv vendor _vendor
+/var/www/html/drupal8.dev $ mv json.lock _json.lock
 /var/www/html/drupal8.dev $ composer update drupal/core --with-dependencies
 ```
 
 ### Import a Drupal module
+
+This will insert a line in your composer.json file, the new module will now be a
+project requirement.
 
 ```
 /var/www/html/drupal8.dev $ composer require drupal/<module_name\>
@@ -29,20 +54,21 @@ try [Option A: drupal-composer/drupal-project](https://github.com/drupal-compose
 
 ### Update a Drupal module
 
+If the module was installed via composer.
 ```
 /var/www/html/drupal8.dev $ composer update drupal/<module_name\>
 ```
 
 ## DRUPAL CONSOLE
 
-If you created your Drupal site using composer, Drupal Console and Drush
-will already be installed. If not, you can install Console using Composer.
+If you created your Drupal site using composer, Drupal Console will already be
+installed. If not, you can install Console using Composer.
 
 [Install Drupal Console Using Composer](https://docs.drupalconsole.com/en/getting/composer.html)
 
 [Online Documentation](https://hechoendrupal.gitbooks.io/drupal-console/content/en/index.html)
 
-### Setup developer mode
+## DEVELOPER MODE
 
 ```
 /var/www/html/drupal8.dev $ cp web/sites/default/default.services.yml web/sites/default/services.yml
@@ -50,14 +76,14 @@ will already be installed. If not, you can install Console using Composer.
 /var/www/html/drupal8.dev $ drupal site:mode dev
 ```
 
-Uncomment the code following this comment in web/sites/default/settings.php
-```
-* Load local development override configuration, if available.
-```
-
 ## DRUSH
 
-[Documentation](http://docs.drush.org/en/8.x/ )
+If you created your Drupal site using composer, Drush will already be installed.
+If not, you can install Console using Composer.
+
+Drupal 8.4 requires Drush 9.
+
+[Documentation](http://docs.drush.org/en/9.x/ )
 
 ## CODING STANDARDS
 
@@ -87,10 +113,8 @@ Uncomment the code following this comment in web/sites/default/settings.php
 
 ### Usage - fix code
 
-`/var/www/html/drupal8.devweb/modules $ phpcbf --standard=Drupal mymodule > mymodule.fix`
+`/var/www/html/drupal8.dev/web/modules $ phpcbf --standard=Drupal mymodule > mymodule.fix`
 
 _Note_: Use caution with phpcbf, commit code first to ensure you can rollback if necessary.
 
 [Drupal Markdown Coding Standards](https://www.drupal.org/docs/develop/coding-standards/markdown-coding-standards) are yet to be confirmed
-
-
