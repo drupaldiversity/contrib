@@ -106,7 +106,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 All right! Since we've made our issue, we can make a patch. You want your patch file to follow a specific naming convention: `[description]-[issue-number]-[comment-number].patch`
-From the drupal.org documentation:
+From the [drupal.org documentation](https://www.drupal.org/node/1319154):
 ```
 The description can be the lowercased title of the issue, if it's descriptive enough. Replace any punctuation or spaces with hyphens.
 The issue-number is the node ID of the issue (e.g. http://drupal.org/node/1266348 is issue-number
