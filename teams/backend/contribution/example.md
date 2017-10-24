@@ -31,7 +31,7 @@ someone else might have made a patch already or there may be an existing workaro
 
 You can find the issue queue for any module by looking on the module page. It will be in the right block:
 
-[]()
+![Issue queue location on drupal.org module page](/teams/backend/contribution/images/example_issue_queue.png)
 
 If you're looking through the core issue queue, you can narrow down your search to apply to only the module/component you want [with the advanced search options](https://www.drupal.org/project/issues/search/drupal).
 The issue queue filters are your best friend.
@@ -69,18 +69,25 @@ Post general support requests in Drupal.org forum.
 ```
 There's also another nice issue creation walkthrough [elsewhere on drupal.org](https://www.drupal.org/node/73179).
 
+Now I think I'm ready to fill out the issue creation form:
+![Issue creation form mockup](/teams/backend/contribution/images/angelam_issue_queue.png)
+
+You can [see the issue I made here](https://www.drupal.org/node/2918544).
+
 ## Step 4: Patch It Up with the Command Line! (optional)
 I put optional in the title because sometimes you don't have a patch for your bug or feature request and that's perfectly okay.
 
-Generally, when making a patch, you want to grab the repository you want to change with git and then make a patch with git.
+Generally, when making a patch, you want to grab the repository you want to change via git and then make a patch with git.
 
 [This guide is so good for making a patch](https://www.drupal.org/node/707484)
 
 I'll walk through what I did for my simple patch. First I cloned the examples module repository. You can find the ssh git location at the bottom of the module/core's drupal.org repository page.
+![ssh git location of a drupal.org repo at the bottom of its repository page](/teams/backend/contribution/images/git_repo.png)
 
 ` git clone git://git.drupal.org/project/examples.git `
 
-Next, we've got to see which branch we should be making the patch from. This matters because sometimes changes on the devleopment branch will conflict with the changes you want to make.
+Next, we've got to see which branch we should be making the patch from. This matters because sometimes changes on the devleopment branch will conflict with the changes you want to make. You can also easily see this on the drupal.org repository page:
+![branch drop-down at top of github repository page](/teams/backend/contribution/images/branch_list.png)
 The examples module has no development branch so I'm going to stay on the default branch: 8.x-1.x
 You can see this easily with a `git status`:
 ```
