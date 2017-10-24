@@ -13,18 +13,21 @@ If anything is unclear or you need help, please come talk to us on Slack ([Sign 
   * [Communication](#communication)
 * [Ground Rules](#ground-rules)
 * [Getting Started](#getting-started)
-  * [Requirements]
-  * [Drupal setup]
-  * 
-  * 
-  * 
-* 
+  * [Requirements](#requirements)
+  * [Drupal setup](#drupal-setup)
+  * [Working on Tickets](#working-on-tickets)
+  * [Submit changes / git(hub)](#submit-changes-/-git(hub))
+* [Further Helpful Resources](#further-helpful-resources)
   * [Getting Started with Drupal](#getting-started-with-drupal)
+  * [Styleguide](#styleguide)
+  * [Coding guidelines](#coding-guidelines)
+  * [Glossary](#glossary)
+* [Further Helpful Resources](#credits-and-attributions)
   
 ## Links
 
 ### Documentation
-?
+
 ###Communication
 We are found in the public Drupal Slack (Sign up here: https://drupalslack.herokuapp.com/) if the Channel #ddi-contrib-team.
 
