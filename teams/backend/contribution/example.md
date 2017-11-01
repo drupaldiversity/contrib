@@ -4,7 +4,7 @@ If you just made an account, you’ll need to get a “confirmed” user role be
 
 [Drupal User Role Guide](https://www.drupal.org/node/1887616)
 
-Someone with the community user role can give other people confirmed user roles.
+Someone with the community user role can give other people confirmed user roles. In our case, you can ping @alannaburke or @alexdmccabe in #ddi-contrib-team to have them review your account. 
 
 Note: this guide assumes that you have a Drupal development environment set up already. [You can find another guide for that elsewhere in our documentation](/teams/README.md).
 
